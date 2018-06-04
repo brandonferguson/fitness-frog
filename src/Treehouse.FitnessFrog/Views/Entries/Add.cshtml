@@ -48,8 +48,11 @@
 
 
         <div class="form-group">
-            @Html.LabelFor(m => m.Exclude, new { @class = "control-label" })
-            @Html.TextBoxFor(m => m.Exclude, new { @class = "form-control" })
+            <div class="check">
+                <label>
+                    @Html.CheckBoxFor(m => m.Exclude) @Html.DisplayNameFor(m => m.Exclude)
+                </label>
+            </div>
         </div>
     </div>
 
@@ -59,7 +62,7 @@
         <div class="form-group"
              @Html.LabelFor(m => m.Notes, new { @class = "control-label" })
              @Html.TextAreaFor(m => m.Notes, 14, 20, new { @class = "form-control" })
-        </div>
+         </div>
     </div>
 
        <div class="col-md-12">
